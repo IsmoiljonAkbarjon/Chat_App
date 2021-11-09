@@ -31,10 +31,11 @@ const server = app.listen(8000, ()=>{
   console.log('server run 8000');
 })
 
+//WebSocket
+
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-//WebSocket
 
 io.use(async (socket,next)=>{
   try {
